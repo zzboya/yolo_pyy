@@ -1,0 +1,25 @@
+<div class="info" v-if="active === 3" >
+<el-row :gutter="20">
+  <el-col :span="8"><div class="grid-content">
+    <div>
+          <h4>原始图像</h4>
+          <el-image
+          style="width: 400px; height: 400px"
+          :src=original_img
+          ></el-image>
+        </div></div></el-col>
+        <el-col :span="4"><div class="grid-content">   </div></el-col>
+      <el-col :span="8"><div class="grid-content">
+    <div>
+      <h4>处理结果</h4>
+      <el-image
+      style="width: 400px; height: 400px"
+      :src=result_img
+      :preview-src-list=[result_img]>
+        <div slot="placeholder" class="image-slot">
+          加载中<span class="dot">...</span>
+    </div>
+  </el-image>
+</div></div></el-col>
+
+</el-row>
